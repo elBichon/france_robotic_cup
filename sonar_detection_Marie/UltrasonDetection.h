@@ -19,16 +19,18 @@
 #define trigPinD 4
 #define trigPinAV 6
 #define trigPinAR 8
+#define Signal 10
 
-// defines variables
-long duration; // variable for the duration of sound wave travel
-int distance; // variable for the distance measurement
-float THRESHOLD; //variable for the decision to stop or not
-bool decision;
+// defines variables 
+const int THRESHOLD = 30; //variable for the decision to stop or not
+
 
 float measureDistance(int, int);
 bool dashDecision(float, float);
 float measureDistance4();
 void setupDetection();
-
+void SendSignal(bool);
+bool verifDistance(float);
+float DetDistMin(float, float, float, float);
+#endif
 #endif
